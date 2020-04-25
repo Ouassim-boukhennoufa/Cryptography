@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hill"
+    android:background="#F8EFD2">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Hill Method"
+            android:textColor="@color/view"
+            android:textSize="36sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/chif"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Type text to encode"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Give the matrix:"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chif" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="A"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/chif" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/defaut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="hide"
+                android:text="Default Alphabet(From A to Z)"
+                android:textColor="@color/text"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="show"
+                android:text="Personalize the alphabet"
+                android:textColor="@color/text"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter your personalized alphabet"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group" />
+
+        <Button
+            android:id="@+id/encode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:onClick="ciphe"
+            android:text="Encrypt"
+            android:textColor="#7C7A02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/car" />
+
+        <EditText
+            android:id="@+id/dechiff"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Type text to decipher"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/encode" />
+
+        <Button
+            android:id="@+id/decode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:onClick="deciph"
+            android:text="Decipher"
+            android:textColor="#7C7A02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dechiff" />
+
+        <EditText
+            android:id="@+id/b"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="B"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/chif" />
+
+        <EditText
+            android:id="@+id/c"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="C"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        <EditText
+            android:id="@+id/d"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="D"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/c"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d" />
+
+        <EditText
+            android:id="@+id/car"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Char"
+            android:inputType="textPersonName"
+            android:maxLength="1"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/te"
+            app:layout_constraintTop_toBottomOf="@+id/group" />
+
+        <TextView
+            android:id="@+id/te"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="51dp"
+            android:text="Add character i text is odd:"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

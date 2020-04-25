@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".RSA"
+    android:background="#F8EFD2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textV"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="RSA Method"
+            android:textAllCaps="true"
+            android:textColor="@color/view"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="Get Started with RSA:"
+            android:textColor="#883223"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textV" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:text="Give p and q:"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/p"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="p"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/q"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="q"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/p"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:gravity="center"
+            android:text="φ(n)=60,give e:"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/su" />
+
+        <EditText
+            android:id="@+id/e"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="e"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/su" />
+
+       <Button
+           android:id="@+id/sub"
+           android:layout_width="wrap_content"
+           android:layout_height="40dp"
+           android:layout_marginTop="5dp"
+           android:background="@drawable/button"
+           android:onClick="submi"
+           android:text="submit"
+           android:textColor="#7C7A02"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/e" />
+
+       <Button
+           android:id="@+id/su"
+           android:layout_width="wrap_content"
+           android:layout_height="40dp"
+           android:layout_marginTop="5dp"
+           android:background="@drawable/button"
+           android:onClick="subm"
+           android:text="submit"
+           android:textColor="#7C7A02"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/q" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub" />
+
+
+        <TextView
+            android:id="@+id/displ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Try an example of RSA"
+            android:textColor="#883223"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/give"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:gravity="center"
+            android:text="Give letter's row:"
+            android:textColor="@color/text"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displ" />
+
+        <EditText
+            android:id="@+id/l"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="row"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/give"
+            app:layout_constraintTop_toBottomOf="@+id/displ" />
+
+        <TextView
+            android:id="@+id/giv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:gravity="center"
+            android:text="Give alphabet's length:"
+            android:textColor="@color/text"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l" />
+
+        <EditText
+            android:id="@+id/r"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_edit"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="length"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/giv"
+            app:layout_constraintTop_toBottomOf="@+id/l" />
+
+        <TextView
+            android:id="@+id/resu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calc" />
+
+        <Button
+            android:id="@+id/calc"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:onClick="submit"
+            android:text="Calculate"
+            android:textColor="#7C7A02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/r" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
