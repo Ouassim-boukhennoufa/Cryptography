@@ -203,20 +203,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void about(View v){
-       String taille="-This app is mainly destined to anyone who has some knowledges with cryptography <BR>" +
+       String taille="-This app is mainly destined to anyone who has some knowledge with cryptography <BR>" +
                 "-Its purpose is to let any user be more comfortable with calculations <BR>"
                +"-To build this app i've been learning Dr <i><b>Lemia Louail</b></i> course,Link of the course is on home screen<BR>" +
-               "-Source code is on home screen too you can get by clicking on it or the github's logo<BR>" +
+               "-Source code is on home screen too you can get it by clicking on it or the github's logo<BR>" +
                "-Anyone can contact me to get more information or to explain any interaction by clicking on mail's logo<BR>" +
                "-It contains symetric and asymetric cryptography:<BR>" +
                " *Symetric:if the user chooses default alphabet" +
                " it will encrypt/decipher all the letters otherwise it will let the input as it is," +
-               " if the user chooses personalize alphabet it will encrypt/decipher only if the input is like the typed alphabet otherwise" +
+               " if the user chooses personalize alphabet it will encrypt/decipher only if the input belongs the typed  otherwise" +
                " it will show an error<BR>" +
                " *Asymetric:it handles all the exception respecting each method,it will calculate all what's necessary" +
                " to encrypt/decipher any letter by its row" +
                "-It contains also landscape adavptive to any type of screen if for instance the user has a small screen,he can " +
-               " rotate it so that the view is much pretty" +
+               " rotate it so that the view is much pretty<BR>" +
                "-Finally,share my github's project with friends and let's all be productive";
 
         builder(taille);
