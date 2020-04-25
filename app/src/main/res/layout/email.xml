@@ -20,7 +20,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:text="To:ouassboukh@gmail.com"
+            android:text="To ouassim2012@live.fr"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold|italic"
