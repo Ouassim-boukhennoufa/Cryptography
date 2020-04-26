@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
                " if the user chooses personalize alphabet it will encrypt/decipher only if the input belongs the typed  otherwise" +
                " it will show an error<BR>" +
                " *Asymetric:it handles all the exception respecting each method,it will calculate all what's necessary" +
-               " to encrypt/decipher any letter by its row" +
+               " to encrypt/decipher any letter by its row<BR>"+
                "-It contains also landscape adavptive to any type of screen if for instance the user has a small screen,he can " +
                " rotate it so that the view is much pretty<BR>" +
                "-Finally,share my github's project with friends and let's all be productive";
